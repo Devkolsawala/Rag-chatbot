@@ -1,0 +1,37 @@
+{
+  "total_chunks": 242,
+  "files_processed": 3,
+  "file_sources": {
+    "document.txt": {
+      "chunk_count": 6,
+      "file_type": "txt",
+      "file_size": 5066,
+      "processed_at": "2025-08-22T14:48:02.286974",
+      "sections": []
+    },
+    "elcvia_a2020v19n3p18.pdf": {
+      "chunk_count": 102,
+      "file_type": "pdf",
+      "file_size": 340776,
+      "processed_at": "2025-08-22T14:48:02.402000",
+      "sections": []
+    },
+    "publishedversion.pdf": {
+      "chunk_count": 134,
+      "file_type": "pdf",
+      "file_size": 517580,
+      "processed_at": "2025-08-22T14:48:02.516577",
+      "sections": []
+    }
+  },
+  "model_name": "all-MiniLM-L6-v2",
+  "last_updated": "2025-08-22T14:48:07.514640",
+  "system_info": {
+    "chunk_size_range": {
+      "min": 14,
+      "max": 999,
+      "avg": 745
+    },
+    "avg_chunk_length": 745.1074380165289
+  }
+}
