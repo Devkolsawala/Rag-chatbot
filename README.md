@@ -1,5 +1,9 @@
 # 🤖 RAG Chatbot - Company Knowledge Base
 
+
+🌐 **Live Demo:** [RAG Chatbot - Company Knowledge Base](https://rag-chatbot-urmzhtmtf6q9vx8bideknx.streamlit.app/)
+
+
 A Retrieval-Augmented Generation (RAG) chatbot built with Streamlit that helps employees find information about company policies and procedures.
 
 ## 🌟 Features
