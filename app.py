@@ -22,151 +22,133 @@ st.set_page_config(
 )
 
 # Enhanced CSS for modern chatbot UI
-st.markdown("""
-/* Main styling */
-.stApp {
-    background: #f5f6fa; /* light neutral background */
-}
+st.markdown(
+    """
+    <style>
+    /* Global background */
+    .stApp {
+        background-color: #f4f6fb;
+        font-family: 'Segoe UI', sans-serif;
+        color: #2c3e50;
+    }
 
-.main-container {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
+    /* Card-like sections */
+    .main-container {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 25px 30px;
+        margin: 20px auto;
+        max-width: 1000px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
 
-/* Chat styling */
-.chat-container {
-    max-height: 500px;
-    overflow-y: auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    background: #ffffff;
-}
+    /* Section headers */
+    .section-header {
+        background: linear-gradient(90deg, #4A90E2, #6A5ACD);
+        color: white;
+        padding: 15px 20px;
+        border-radius: 12px;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
 
-.user-message {
-    background: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 14px 14px 4px 14px;
-    margin: 5px 0;
-    margin-left: 20%;
-    display: inline-block;
-    max-width: 80%;
-    word-wrap: break-word;
-}
+    /* Chat container */
+    .chat-container {
+        max-height: 500px;
+        overflow-y: auto;
+        border-radius: 12px;
+        padding: 20px;
+        background: #f9fbfe;
+        border: 1px solid #e0e6f1;
+    }
 
-.bot-message {
-    background: #f1f3f4;
-    color: #333;
-    padding: 10px 15px;
-    border-radius: 14px 14px 14px 4px;
-    margin: 5px 0;
-    margin-right: 20%;
-    display: inline-block;
-    max-width: 80%;
-    word-wrap: break-word;
-    border-left: 3px solid #007bff;
-}
+    /* User messages */
+    .user-message {
+        background: #4A90E2;
+        color: white;
+        padding: 12px 16px;
+        border-radius: 14px 14px 4px 14px;
+        margin: 8px 0;
+        margin-left: 20%;
+        display: inline-block;
+        max-width: 75%;
+        word-wrap: break-word;
+        font-size: 14px;
+    }
 
-.message-time {
-    font-size: 10px;
-    color: #777;
-    margin-top: 2px;
-}
+    /* Bot messages */
+    .bot-message {
+        background: #eef2fb;
+        color: #2c3e50;
+        padding: 12px 16px;
+        border-radius: 14px 14px 14px 4px;
+        margin: 8px 0;
+        margin-right: 20%;
+        display: inline-block;
+        max-width: 75%;
+        word-wrap: break-word;
+        border-left: 4px solid #4A90E2;
+        font-size: 14px;
+    }
 
-/* Status indicators */
-.status-success {
-    background: #e9f7ef;
-    color: #2e7d32;
-    padding: 12px;
-    border-radius: 8px;
-    margin: 10px 0;
-}
+    /* Message timestamp */
+    .message-time {
+        font-size: 11px;
+        color: #777;
+        margin-top: 3px;
+    }
 
-.status-warning {
-    background: #fff8e1;
-    color: #856404;
-    padding: 12px;
-    border-radius: 8px;
-    margin: 10px 0;
-}
+    /* Input box */
+    textarea {
+        border-radius: 10px !important;
+        border: 1px solid #d0d7e2 !important;
+        padding: 10px !important;
+        font-size: 14px !important;
+    }
 
-.status-error {
-    background: #fdecea;
-    color: #b71c1c;
-    padding: 12px;
-    border-radius: 8px;
-    margin: 10px 0;
-}
+    textarea:focus {
+        border-color: #4A90E2 !important;
+        box-shadow: 0 0 0 0.2rem rgba(74,144,226,0.25) !important;
+    }
 
-/* Input styling */
-.stTextArea textarea {
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
+    /* Buttons */
+    button[kind="primary"] {
+        background: linear-gradient(90deg, #4A90E2, #6A5ACD) !important;
+        color: white !important;
+        border-radius: 8px !important;
+        border: none !important;
+        padding: 10px 20px !important;
+        font-weight: 600 !important;
+        font-size: 14px !important;
+        transition: all 0.2s ease-in-out;
+    }
 
-.stTextArea textarea:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.15);
-}
+    button[kind="primary"]:hover {
+        background: linear-gradient(90deg, #357ABD, #5A4ACD) !important;
+        transform: scale(1.03);
+    }
 
-/* Button styling */
-.stButton button {
-    background: #007bff;
-    color: white;
-    border-radius: 6px;
-    border: none;
-    padding: 8px 18px;
-    font-weight: 500;
-    transition: background 0.2s ease;
-}
+    /* Example cards */
+    .source-card {
+        background: #ffffff;
+        padding: 14px;
+        border-radius: 10px;
+        margin: 10px 0;
+        border-left: 4px solid #4A90E2;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
 
-.stButton button:hover {
-    background: #0056b3;
-}
-
-/* Sidebar */
-.css-1d391kg {
-    background: #f1f3f4;
-}
-
-/* Source cards */
-.source-card {
-    background: #fafafa;
-    padding: 12px;
-    border-radius: 8px;
-    margin: 10px 0;
-    border-left: 3px solid #007bff;
-}
-
-/* Typing indicator */
-.typing-indicator {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #007bff;
-    animation: typing 1.2s infinite ease-in-out both;
-    margin: 0 2px;
-}
-.typing-indicator:nth-child(1) { animation-delay: -0.32s; }
-.typing-indicator:nth-child(2) { animation-delay: -0.16s; }
-
-@keyframes typing {
-    0%, 80%, 100% { transform: scale(0.8); opacity: 0.4; }
-    40% { transform: scale(1); opacity: 1; }
-}
-
-/* Hide streamlit elements */
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
-
-""", unsafe_allow_html=True)
-
+    /* Hide Streamlit branding */
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 # Initialize session state
 def init_session_state():
     """Initialize session state variables"""
