@@ -1,0 +1,10 @@
+streamlit
+sentence-transformers
+faiss-cpu
+pandas
+numpy
+torch 
+torchvision 
+torchaudio --index-url https://download.pytorch.org/whl/cpu
+transformers
+python-dotenv
