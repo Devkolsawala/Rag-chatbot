@@ -1,10 +1,43 @@
-streamlit
-sentence-transformers
-faiss-cpu
-pandas
-numpy
-torch 
-torchvision 
-torchaudio --index-url https://download.pytorch.org/whl/cpu
-transformers
-python-dotenv
+# Enhanced RAG System Dependencies
+# Optimized for Intel i5-11400 with 16GB RAM
+
+# Core LangChain components
+langchain>=0.1.0
+langchain-community>=0.0.10
+langchain-text-splitters>=0.0.1
+
+# Embedding and vector storage
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.4
+transformers>=4.25.0
+torch>=1.13.0
+
+# Document processing
+PyMuPDF>=1.23.0  # Better PDF processing
+pypdf2>=3.0.0    # Fallback PDF reader
+
+# Core scientific computing
+numpy>=1.21.0
+pandas>=1.5.0
+
+# Web interface
+streamlit>=1.28.0
+
+# Utilities
+tqdm>=4.64.0
+python-dateutil>=2.8.0
+
+# Optional: For better performance and additional features
+# Uncomment if needed:
+
+# scikit-learn>=1.1.0  # For additional ML utilities
+# nltk>=3.8           # For advanced text processing
+# spacy>=3.4.0        # For NLP features (requires: python -m spacy download en_core_web_sm)
+
+# For GPU acceleration (if available):
+# torch>=1.13.0+cu117  # Replace faiss-cpu with faiss-gpu
+# faiss-gpu>=1.7.4
+
+# Development and debugging
+# pytest>=7.0.0       # For testing
+# jupyter>=1.0.0      # For development notebooks
