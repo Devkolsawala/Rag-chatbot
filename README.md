@@ -16,7 +16,7 @@ A Retrieval-Augmented Generation (RAG) chatbot built with Streamlit that helps e
 - **Frontend**: Streamlit
 - **Embeddings**: all-MiniLM-L6-v2 (SentenceTransformers)
 - **Vector Database**: FAISS (CPU optimized)
-- **Backend**: Python 3.8+
+- **Backend**: Python 3.10+
 
 ## 🚀 Quick Start
 
