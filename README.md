@@ -1,5 +1,9 @@
 # 🤖 RAG Chatbot - Company Knowledge Base
 
+
+🌐 **Live Demo:** [RAG Chatbot - Company Knowledge Base](https://rag-chatbot-urmzhtmtf6q9vx8bideknx.streamlit.app/)
+
+
 A Retrieval-Augmented Generation (RAG) chatbot built with Streamlit that helps employees find information about company policies and procedures.
 
 ## 🌟 Features
@@ -16,11 +20,11 @@ A Retrieval-Augmented Generation (RAG) chatbot built with Streamlit that helps e
 - **Frontend**: Streamlit
 - **Embeddings**: all-MiniLM-L6-v2 (SentenceTransformers)
 - **Vector Database**: FAISS (CPU optimized)
-- **Backend**: Python 3.8+
+- **Backend**: Python 3.10+
 
 ## 🚀 Quick Start
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/rag-chatbot.git
+git clone https://github.com/Devkolsawala/rag-chatbot.git
 cd rag-chatbot
